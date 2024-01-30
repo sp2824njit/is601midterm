@@ -45,3 +45,9 @@ items_obj = {}
 for order_obj in orders_list:
     update_customers_obj(order_obj, customers_obj)
     update_items_obj(order_obj, items_obj)
+
+with open('customers.json', 'w') as customers_file:
+    json.dump(customers_obj, customers_file, indent=4)
+
+with open('items.json', 'w') as items_file:
+    json.dump(items_obj, items_file, indent=4)
